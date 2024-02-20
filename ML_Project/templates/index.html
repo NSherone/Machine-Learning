@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MachineHealthForecaster</title>
+</head>
+<body>
+    <h1>Machine Health Forecaster</h1>
+    <form action="/predict" method="post">
+        <label for="air_temp">Air Temperature [K]:</label>
+        <input type="text" name="air_temp" step="0.001" required><br>
+
+        <label for="process_temp">Process Temperature [K]:</label>
+        <input type="text" name="process_temp" step="0.001" required><br>
+
+        <label for="rotational_speed">Rotational Speed [rpm]:</label>
+        <input type="text" name="rotational_speed" required><br>
+
+        <label for="torque">Torque [Nm]:</label>
+        <input type="text" name="torque" step="0.001" required><br>
+
+        <label for="tool_wear">Tool Wear [min]:</label>
+        <input type="text" name="tool_wear" step="0.001" required><br>
+
+        <label for="machine_type">Machine Type:</label>
+        <select name="machine_type" required>
+            <option value="M">M</option>
+            <option value="H">H</option>
+            <option value="L">L</option>
+        </select><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
